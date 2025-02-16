@@ -3,16 +3,13 @@ import tkinter as tk
 from tkinter import filedialog, messagebox
 from tkinter import simpledialog
 
-# إنشاء نافذة الواجهة الرئيسية
 root = tk.Tk()
 root.title("إنشاء ملف Batch")
 root.geometry("500x400")
 
-# المتغيرات
 selected_folder = ""
 output_file_path = ""
 
-# دالة اختيار المجلد
 def browse_folder():
     global selected_folder
     folder = filedialog.askdirectory()
@@ -21,7 +18,6 @@ def browse_folder():
         folder_entry.delete(0, tk.END)
         folder_entry.insert(0, selected_folder)
 
-# دالة اختيار مكان الحفظ
 def browse_output_file():
     global output_file_path
     file_path = filedialog.asksaveasfilename(defaultextension=".bat", filetypes=[("Batch Files", "*.bat")])
@@ -33,7 +29,6 @@ def browse_output_file():
         output_entry.delete(0, tk.END)
         output_entry.insert(0, output_file_path)
 
-# دالة إنشاء ملف الـ Batch
 def create_batch_file():
     if not selected_folder:
         messagebox.showwarning("تحذير", "يجب اختيار مجلد يحتوي على الملفات التنفيذية (.exe).")
@@ -62,7 +57,6 @@ def create_batch_file():
     except Exception as e:
         messagebox.showerror("خطأ", f"حدث خطأ أثناء إنشاء ملف الـ Batch: {e}")
 
-# إنشاء العناصر في الواجهة
 tk.Label(root, text="اختر مجلد الملفات:").pack(pady=5)
 folder_entry = tk.Entry(root, width=50)
 folder_entry.pack(pady=5)
@@ -75,5 +69,4 @@ tk.Button(root, text="Browse", command=browse_output_file).pack(pady=5)
 
 tk.Button(root, text="تصدير", command=create_batch_file).pack(pady=10)
 
-# تشغيل الواجهة
 root.mainloop()
