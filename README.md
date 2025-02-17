@@ -1,5 +1,5 @@
 # python_app/An app that helps you install all your apps in one go by clicking on a single file
-وصف التطبيق (بالعربي):
+
 
 هذا التطبيق يساعدك في إنشاء ملف Batch (.bat) يحتوي على أوامر لتشغيل عدة برامج في نفس الوقت. الفكرة هي أنه يمكنك تحديد مجلد يحتوي على برامج (ملفات .exe)، ومن ثم يقوم التطبيق بإنشاء ملف Batch يقوم بتشغيل كل البرامج الموجودة داخل هذا المجلد بشكل تلقائي عندما تفتحه.
 
@@ -15,7 +15,7 @@
   
 ---
 
-App Description (in English):
+
 This app helps you create a Batch (.bat) file that contains commands to run multiple programs at once. The idea is that you can select a folder containing programs (with .exe files), and then the app creates a Batch file that will run all the programs inside that folder automatically when you open it.
 
 How it works:
